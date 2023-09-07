@@ -30,6 +30,9 @@
     &__tools {
         gap: 20px;
     }
+    &--hide {
+        transform: translateY(-100%);
+    }
 }
 .menubtn {
     display: none;
