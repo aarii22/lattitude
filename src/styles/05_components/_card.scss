@@ -1,0 +1,78 @@
+/* Cards */
+.card {
+    position: relative;
+    &--1 {
+        padding: 40px 25px;
+        border: 1px solid rgb(0 0 0 / 10%);
+        img {
+            margin-bottom: 45px;
+        }
+        h5 {
+            color: var(--clr-primary-150);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    &--2 {
+        background-color: var(--clr-primary-200);
+        border-radius: 10px;
+        text-align: left;
+        padding: 30px 30px 40px;
+        color: var(--clr-general-white);
+        .card__head {
+            margin-bottom: 30px;
+            position: relative;
+            display: flex;
+            gap: 22px;
+            align-items: center;
+            &--img {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -15px;
+                    left: -10px;
+                    width: 46px;
+                    height: 40px;
+                    background-size: contain;
+                    background-image: url(../images/quote.png);
+                    background-repeat: no-repeat;
+                }
+                img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            h6{
+                font-size: 24px;
+                font-weight: 400;
+            }
+            p{
+                font-size: 16px;
+                line-height: 1;
+            }
+        }
+        p{
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    }
+    &--3{
+        background-color: var(--clr-general-white);
+        border-radius: 10px;
+        padding: 30px 30px 50px;
+        .card__head{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .lmore{
+            font-weight: 500;
+        }
+    }
+}
+/**/

@@ -1,0 +1,17 @@
+/* Section */
+.section{
+    &--pad{
+        padding: 80px 0;
+    }
+}
+// Section BG Colors
+.bg{
+    &--blue{
+        background-color: var(--clr-primary-200);
+    }
+}
+// Text Color
+.text--white{
+    color: var(--clr-general-white);
+}
+/**/ 

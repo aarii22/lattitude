@@ -1,0 +1,23 @@
+/* Category Section */
+.categorysec {
+    text-align: center;
+    h5{
+        margin-bottom: 20px;
+    }
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 70px;
+        .card--1{
+            flex: 0 0 33.33%;
+            @include mq("tablet-wide") {
+                flex: 0 0 50%;
+            }
+            @include mq("tablet-small") {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}
+//

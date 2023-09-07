@@ -1,0 +1,32 @@
+/* Herobanner */
+.herobanner{
+    background-color: var(--clr-primary-200);
+    padding: 245px 0;
+    color: var(--clr-general-white);
+    @include mq("tablet-wide") {
+        padding: 100px 0;
+    }
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+        align-items: center;
+        @include mq("tablet-wide") {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__imgsec{
+        text-align: center;
+    }
+    h1{
+        color: var(--clr-primary-100);
+        margin-bottom: 30px;
+    }
+    p{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 50px;
+    }
+} 
+/**/

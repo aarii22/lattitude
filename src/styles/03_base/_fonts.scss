@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+@font-face {
+    font-family: "Pangram";
+    src: url("https://db.onlinewebfonts.com/t/56a82ed18dbcec3eaab8c012dea226cf.eot");
+    src: url("https://db.onlinewebfonts.com/t/56a82ed18dbcec3eaab8c012dea226cf.eot?#iefix") format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/56a82ed18dbcec3eaab8c012dea226cf.woff2") format("woff2"),
+        url("https://db.onlinewebfonts.com/t/56a82ed18dbcec3eaab8c012dea226cf.woff") format("woff"),
+        url("https://db.onlinewebfonts.com/t/56a82ed18dbcec3eaab8c012dea226cf.ttf") format("truetype"),
+        url("https://db.onlinewebfonts.com/t/56a82ed18dbcec3eaab8c012dea226cf.svg#Pangram") format("svg");
+}

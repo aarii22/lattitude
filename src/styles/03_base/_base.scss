@@ -1,0 +1,291 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{"" + $shade}: #{$value};
+    }
+  }
+
+  @each $space, $shades in $spaces {
+    @each $shade, $value in $shades {
+      --sec-#{$space}-#{"" + $shade}: #{$value};
+    }
+  }
+
+  @each $radius, $shades in $border {
+    @each $shade, $value in $shades {
+      --bs-#{$radius}-#{"" + $shade}: #{$value};
+    }
+  }
+
+  @each $font, $weight in $fontweight {
+    @each $shade1, $size in $weight {
+      --f#{$font}-#{$shade1}: #{$shade1};
+    }
+  }
+
+  @each $screen-size, $font-size in $font-scales {
+    @if $screen-size == small {
+      @each $size, $value in $font-size {
+        --fs-#{$size}: #{$value};
+      }
+    } @else if $screen-size == medium {
+      @include mq(phone-wide) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  text-rendering: optimizeSpeed;
+  height: 100%;
+}
+
+body {
+  font-family: $font-family-primary;
+  background-color: var(--clr-white);
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &.hide-overflow {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq("desktop-wide") {
+    max-width: 1180px;
+  }
+}
+
+a {
+  color: var(--clr-general-black);
+  text-decoration: none;
+  @include on-event {
+    color: var(--clr-general-black);
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.lmore {
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  padding-right: 15px;
+  &::after {
+    content: "";
+    position: absolute;
+    transition: 0.3s all ease-in-out;
+    top: 50%;
+    transform: translateY(-35%);
+    right: 0px;
+    width: 6px;
+    height: 10px;
+    background-size: contain;
+    background-image: url(../images/next.svg);
+    background-repeat: no-repeat;
+  }
+  &:hover {
+    &::after {
+      right: -5px;
+    }
+  }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only {
+  @include sr-only;
+}
+
+.sr-only-focusable {
+  @include sr-only-focusable;
+}
+
+#skippy {
+  display: block;
+  padding: 0.5em;
+  color: val(--clr-general-white);
+  background-color: #1c4792;
+  outline: 0;
+
+  .skiplink-text {
+    padding: 0.5em;
+    outline: 1px dotted;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url(https://db.onlinewebfonts.com/c/56a82ed18dbcec3eaab8c012dea226cf?family=Pangram);
+
+$font-family-primary: "Pangram";
+$font-family-secondary: 'Roboto', sans-serif;
+
+/*=============== color ===============*/
+
+$colors: (
+  primary: (
+    100: #F8A887,
+    150: #FFA380,
+    200: #01002A,
+  ),
+  general: (
+    white: #ffffff,
+    white-100: #faf6f4,
+    black: #000000,
+    gray-100: #d8d8d8,
+    gray-200: #979797,
+    gray-300: #727272,
+    gray-400: #4c4c4c,
+    gray-500: #494949,
+    gray-600: #353338,
+    gray-700: #333532,
+    gray-800: #595959,
+    yellow: #ffc539,
+    orange: #ff8f24,
+    brown: #1b0001,
+    red: #ff0000,
+    red-100: #c70b0c,
+  ),
+);
+
+/*=============== font size ===============*/
+
+$spaces: (
+  space: (
+    10: 0.5rem,
+    15: 0.725rem,
+    20: 1rem,
+    25: 1.25rem,
+    30: 1.5rem,
+    35: 1.75rem,
+    40: 2rem,
+    45: 2.25rem,
+    50: 2.5rem,
+    55: 2.75rem,
+    60: 3rem,
+    65: 3.25rem,
+    70: 3.5rem,
+    75: 3.75rem,
+    80: 4rem,
+  ),
+);
+
+$font-scales: (
+  large: (
+    45: 2.813rem,
+    50: 3.125rem,
+    52: 3.25rem,
+    55: 3.438rem,
+    60: 3.75rem,
+    90: 5.625rem,
+    116: 7.25rem,
+    223: 13.938rem,
+  ),
+  medium: (
+    24: 1.5rem,
+    25: 1.563rem,
+    26: 1.625rem,
+    28: 1.75rem,
+    30: 1.875rem,
+    32: 2rem,
+    34: 2.125rem,
+    35: 2.188rem,
+    36: 2.25rem,
+    38: 2.375rem,
+    40: 2.5rem,
+    42: 2.625rem,
+    44: 2.75rem,
+  ),
+  small: (
+    10: 0.625rem,
+    12: 0.75rem,
+    13: 0.813rem,
+    14: 0.875rem,
+    15: 0.938rem,
+    16: 1rem,
+    17: 1.063rem,
+    18: 1.125rem,
+    19: 1.188rem,
+    20: 1.25rem,
+    21: 1.313rem,
+    22: 1.375rem,
+    24: 1.5rem,
+    25: 1.563rem,
+    26: 1.625rem,
+    28: 1.75rem,
+    30: 1.875rem,
+    32: 2rem,
+    34: 2.125rem,
+    35: 2.188rem,
+    36: 2.25rem,
+    37: 2.313rem,
+    38: 2.375rem,
+    40: 2.5rem,
+    42: 2.625rem,
+    44: 2.75rem,
+    45: 2.813rem,
+    47: 2.938rem,
+    48: 3rem,
+    50: 3.125rem,
+    52: 3.25rem,
+    55: 3.438rem,
+    56: 3.5rem,
+    60: 3.75rem,
+    62: 3.875rem,
+    66: 4.125rem,
+    70: 4.375rem,
+    72: 4.5rem,
+    75: 4.688rem,
+    81: 5.063rem,
+    83: 5.188rem,
+    86: 5.375rem,
+    90: 5.625rem,
+    98: 6.125rem,
+    116: 7.25rem,
+    120: 7.5rem,
+    223: 13.938rem,
+  ),
+);
+
+$fontweight: (
+  w: (
+    100: 100,
+    200: 200,
+    300: 300,
+    400: 400,
+    500: 500,
+    600: 600,
+    700: 700,
+    800: 800,
+    900: 900,
+  ),
+);
+
+$border: (
+  radius: (
+    10: 0.5rem,
+    20: 1rem,
+    30: 1.5rem,
+    40: 2rem,
+    50: 2.5rem,
+    60: 3rem,
+    70: 3.5rem,
+    80: 4rem,
+    90: 4.5rem,
+    100: 5rem,
+  ),
+);

@@ -1,0 +1,28 @@
+{
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^1.2.0",
+    "@astrojs/react": "^1.2.1",
+    "@astrojs/sitemap": "^1.0.0",
+    "astro": "^2.1.4",
+    "astro-compress": "^1.0.12",
+    "autoprefixer": "^10.4.12",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
+    "jquery": "^3.6.1",
+    "open-props": "^1.4.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.55.0"
+  }
+}

@@ -1,0 +1,35 @@
+/* Testimonials */
+.testimonial {
+    text-align: center;
+    overflow: hidden;
+    .slider--testimonial {
+        margin-top: 50px;
+        .slick-list {
+            overflow: unset;
+            position: relative;
+            z-index: 0;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                transform: translateX(-101%);
+                background-color: var(--clr-general-white);
+                z-index: 1;
+                @include mq("tablet-wide") {
+                    display: none;
+                }
+            }
+            @include mq("tablet-wide") {
+                overflow: hidden;
+            }
+        }
+        .slick-track{
+            margin: 0 -15px;
+        }
+        .slick-slide {
+            margin: 0 10px;
+        }
+    }
+}
